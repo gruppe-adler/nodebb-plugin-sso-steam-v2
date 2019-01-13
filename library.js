@@ -1,14 +1,14 @@
 (function(module) {
 	'use strict';
 
-	var user = module.parent.require('./user.js'),
-		db = module.parent.require('../src/database.js'),
-		meta = module.parent.require('./meta'),
-		passport = module.parent.require('passport'),
+	var user = require.main.require('./src/user/index'),
+		db = require.main.require('./src/database/index'),
+		meta = require.main.require('./src/meta'),
+		passport = require.main.require('passport'),
 		passportSteam = require('passport-steam').Strategy,
-		utils = module.parent.require('../public/src/utils'),
-		authenticationController = module.parent.require('./controllers/authentication'),
-		winston = module.parent.require('winston'),
+		utils = require.main.require('./src/utils'),
+		authenticationController = require.main.require('./src/controllers/authentication'),
+		winston = require.main.require('winston'),
 		async = require('async');
 
 	var constants = Object.freeze({
