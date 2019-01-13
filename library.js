@@ -40,7 +40,7 @@
 
 		db.setObjectField('steam-sso:uid-link', steamid, uid);
 		db.setObjectField('steam-sso:steamid-link', uid, steamid);
-	}
+	};
 
 	Steam.getStrategy = function (strategies, callback) {
 		meta.settings.get('sso-steam', function(err, settings) {
@@ -177,7 +177,7 @@
 				callback(null, uid);
 			});
 		});
-	}
+	};
 
 	Steam.addMenuItem = function(custom_header, callback) {
 		custom_header.authentication.push({
@@ -198,7 +198,7 @@
 			}
 			callback(null, data);
 		})
-	}
+	};
 
 	module.exports = Steam;
 }(module));
