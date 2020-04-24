@@ -1,6 +1,6 @@
 {
   "name": "@gruppe-adler/nodebb-plugin-sso-steam-v2",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "NodeBB Steam SSO refactor",
   "main": "library.js",
   "repository": {
@@ -27,8 +27,7 @@
   "readme": "",
   "readmeFilename": "README.md",
   "dependencies": {
-    "async": "^2.5.0",
-    "passport-steam": "~1.0.9"
+    "passport-steam": "~1.0.14"
   },
   "nbbpm": {
     "compatibility": "^1.11.0"
