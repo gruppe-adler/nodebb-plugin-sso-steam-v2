@@ -48,8 +48,8 @@
 				passport.use(
 					new passportSteam(
 					{
-						returnURL: module.parent.require('nconf').get('url') + '/auth/steam/callback',
-						realm: module.parent.require('nconf').get('url'),
+						returnURL: require.main.require('nconf').get('url') + '/auth/steam/callback',
+						realm: require.main.require('nconf').get('url'),
 						apiKey: settings['key'],
 						passReqToCallback: true
 					},
@@ -103,7 +103,7 @@
 			} else {
 				data.associations.push({
 					associated: false,
-					url: module.parent.require('nconf').get('url') + '/auth/steam',
+					url: require.main.require('nconf').get('url') + '/auth/steam',
 					name: constants.name,
 					icon: constants.admin.icon
 				});
