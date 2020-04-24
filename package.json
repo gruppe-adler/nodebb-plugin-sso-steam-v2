@@ -5,7 +5,7 @@
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SuperiorServers/nodebb-plugin-sso-steam-v2"
+    "url": "https://github.com/gruppe-adler/nodebb-plugin-sso-steam-v2"
   },
   "keywords": [
     "nodebb",
