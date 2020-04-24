@@ -3,6 +3,7 @@
 const user = require.main.require('./src/user/index'),
 	db = require.main.require('./src/database/index'),
 	meta = require.main.require('./src/meta'),
+	nbbUrl = require.main.require('nconf').get('url'),
 	passport = require.main.require('passport'),
 	passportSteam = require('passport-steam').Strategy,
 	utils = require.main.require('./src/utils'),
@@ -46,8 +47,8 @@ Steam.getStrategy = function (strategies, callback) {
 			passport.use(
 				new passportSteam(
 				{
-					returnURL: require.main.require('nconf').get('url') + '/auth/steam/callback',
-					realm: require.main.require('nconf').get('url'),
+					returnURL: nbbUrl + '/auth/steam/callback',
+					realm: nbbUrl,
 					apiKey: settings['key'],
 					passReqToCallback: true
 				},
@@ -101,7 +102,7 @@ Steam.getAssociation = function (data, callback) {
 		} else {
 			data.associations.push({
 				associated: false,
-				url: require.main.require('nconf').get('url') + '/auth/steam',
+				url: nbbUrl + '/auth/steam',
 				name: constants.name,
 				icon: constants.admin.icon
 			});
