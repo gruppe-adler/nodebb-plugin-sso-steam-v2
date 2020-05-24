@@ -74,6 +74,7 @@ Steam.getStrategy = function (strategies, callback) {
 				name: 'steam',
 				url: '/auth/steam',
 				callbackURL: '/auth/steam/callback',
+				checkState: false,
 				icon: constants.admin.icon,
 				scope: 'user:username'
 			});
