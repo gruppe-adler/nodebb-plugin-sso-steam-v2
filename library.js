@@ -60,6 +60,8 @@ Steam.getStrategy = function (strategies, callback) {
 					}
 
 					Steam.login(profile.id, profile.displayName, profile._json.avatarfull, function(err, user) {
+						// todo: rewrite to
+						// https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/00/001c39aa84f0de6f26b8dcf2e50bed0e9b3b0537_full.jpg
 						if (err) {
 							return done(new Error(err));
 						}
