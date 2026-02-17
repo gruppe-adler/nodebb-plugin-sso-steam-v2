@@ -1,11 +1,11 @@
 {
   "name": "@gruppe-adler/nodebb-plugin-sso-steam-v2",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "NodeBB Steam SSO refactor",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gruppe-adler/nodebb-plugin-sso-steam-v2"
+    "url": "git+https://github.com/gruppe-adler/nodebb-plugin-sso-steam-v2.git"
   },
   "keywords": [
     "nodebb",
