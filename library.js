@@ -75,7 +75,10 @@ Steam.getStrategy = async function (strategies) {
 			callbackURL: '/auth/steam/callback',
 			checkState: false,
 			icon: constants.admin.icon,
-			scope: 'user:username'
+			labels: {
+				login: 'Login with Steam',
+				register: 'Register with Steam'
+			}
 		});
 	}
 
